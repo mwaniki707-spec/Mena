@@ -1,0 +1,1 @@
+import server from './src/server.ts'; (async () => { try { const res = await server.fetch(new Request('http://localhost/'), undefined, undefined); console.log('STATUS', res.status); const text = await res.text(); console.log(text.slice(0,1200)); } catch (err) { console.error(err); } })();
